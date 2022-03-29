@@ -30,9 +30,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install --deploy --system
-        brew update
         pip install flake8 pytest pytest-cov
-        brew install allure
+        pip install allure-pytest
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
@@ -44,7 +43,7 @@ jobs:
         mkdir output
     - name: 🦊 Step 4 - Run Firefox tests and generate Allure folder inside `output` folder
       run: |
-        pytest -vs test.py --browser firefox --alluredir=./
+        pytest -vs test.py --browser firefox --alluredir=allure-report
         working-directory: {name of your project root here}
     - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
       run: |
