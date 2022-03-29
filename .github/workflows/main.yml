@@ -27,6 +27,8 @@ jobs:
     - name: Install Python dependencies
       run: pip install pytest
     
-      
+    - name: Install Python dependencies
+      run: pip install pytest-selenium
+    
     - name: Run Tests
       run: pytest test.py 
