@@ -57,15 +57,14 @@ jobs:
          sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve 
          sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
-          sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
+         docker-machine create default --driver xhyve
 
           #  brew install docker
           #  brew install docker-machine
           #  brew install --cask virtualbox
           #  brew install docker-compose
 
-         docker-machine start default 
+      
          docker-machine stop default 
          docker-machine restart default
         
