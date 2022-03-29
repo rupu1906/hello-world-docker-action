@@ -66,11 +66,8 @@ jobs:
 
           docker-machine create default --driver virtualbox
 
-          docker-machine stop default 
-          docker-machine restart default
-        
-         eval "$(docker-machine env default)"
-         docker ps
+      
+          docker ps
         
 
      
