@@ -9,18 +9,18 @@ import os
 class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
-        self.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+        #self.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
         caps= {'browserName': os.getenv('BROWSER', 'chrome')}
-        if caps.get("browserName")=="firefox":
+        # if caps.get("browserName")=="firefox":
         
-            caps = webdriver.FirefoxOptions()
+        #     caps = webdriver.FirefoxOptions()
 
-        else:
-            caps = webdriver.ChromeOptions()
+        # else:
+        #     caps = webdriver.ChromeOptions()
     
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444', 
-            options=caps
+            desired_capabilities=caps
         )
 
     def test_hackernews_search_for_testdrivenio(self):
