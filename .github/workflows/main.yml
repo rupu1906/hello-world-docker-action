@@ -35,13 +35,13 @@ jobs:
     
     - name: Install Python dependencies
       run: pip install pytest-selenium
-      
+
     - name: 📂 Step 3 - Create a temp artifact folder named `output`
       run: |
         mkdir output
     - name: 🦊 Step 4 - Run Firefox tests and generate Allure folder inside `output` folder
       run: |
-        pytest -vs test.py --browser firefox --alluredir=allure-report
+        pytest -vs test.py --browser chrome --alluredir=allure-report
         working-directory: {name of your project root here}
     - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
       run: |
