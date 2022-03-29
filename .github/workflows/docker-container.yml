@@ -51,22 +51,23 @@ jobs:
     steps:
       - name: Install docker
         run: |
-         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+         #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-         brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
-         sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve 
-         sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+         #  brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
+         #  sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve 
+         #  sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/# # #docker-machine-driver-xhyve
 
-         docker-machine create default --driver xhyve
+         
+          brew update
+          brew install docker
+          brew install docker-machine
+          brew install --cask virtualbox
+          brew install docker-compose
 
-          #  brew install docker
-          #  brew install docker-machine
-          #  brew install --cask virtualbox
-          #  brew install docker-compose
+          docker-machine create default --driver virtualbox
 
-      
-         docker-machine stop default 
-         docker-machine restart default
+          docker-machine stop default 
+          docker-machine restart default
         
          eval "$(docker-machine env default)"
          docker ps
