@@ -1,11 +1,32 @@
-name: docker-compose-actions-workflow
-on: push
+name: Integration Tests
+
+on:
+  push:
+    branches: 
+      - main
+
+  workflow_dispatch:
+
 jobs:
-  test:
+  integration-tests:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Build the stack
-        run: docker-compose up -d
-      - name: Test
-        run: pytest test.py
+    - uses: actions/checkout@v2
+    - name: Get IP Address
+      run: echo "##[set-output name=ip;]$(ifconfig eth0 | grep 'inet [0-9\.]* ' -o | sed 's/[^0-9\.]//g')"
+      id: ip_addr 
+
+    - name: Build the stack
+      run: docker-compose up -d
+    - name: Setup Pyhon
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+        
+    - name: Install Python dependencies
+      run: pip install pytest
+    
+      
+    - name: Run Tests
+      run: pytest test.py 
