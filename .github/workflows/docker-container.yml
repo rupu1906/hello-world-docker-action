@@ -8,35 +8,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  integration-tests:
+  Ubuntu-OS:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: docker version
-      run: docker --version
-
-    
+      uses: actions/checkout@v2 
     - name: docker compose
       run: docker-compose up -d  --build
-
     - name: Setup Pyhon
       uses: actions/setup-python@v2
       with:
-        python-version: '3.10'
-        
+        python-version: '3.10'     
     - name: Install Python dependencies
-  
       run: |
         python -m pip install --upgrade pip
-        # pip install flake8 pytest pytest-cov
-        # pip install allure-pytest
-        # npm install -g allure-commandline --save-dev
-        # pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    
     # - name: Install Python dependencies
     #   run: pip install pytest-selenium
     # - name: 📂 Step 3 - Create a temp artifact folder named `output`
@@ -58,4 +45,32 @@ jobs:
     # - name: Run Tests
     #   run: pytest test.py --html=report.html
     
+  Mac-OS:
+    runs-on: 'macos-latest'
+
+    steps:
+      - name: Install docker
+        run: |
+         mkdir -p ~/.docker/machine/cache
+         curl -Lo ~/.docker/machine/cache/boot2docker.iso https://github.com/boot2docker/boot2docker/releases/download/v19.03.12/boot2docker.iso
+         brew install docker docker-machine
+         docker-machine create --driver virtualbox default
+         docker-machine env default
+      - name: Run container
+        run: |
+         eval "$(docker-machine env default)" 
+         docker pull minio/minio
+         docker container run --rm minio/minio minio --help
+      - name: Checkout
+        uses: actions/checkout@v2 
+      - name: docker compose
+        run: docker-compose up -d  --build
+      - name: Setup Pyhon
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'     
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
   
