@@ -28,24 +28,35 @@ jobs:
   
       run: |
         python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv install --deploy --system
+        brew update
         pip install flake8 pytest pytest-cov
+        brew install allure
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Install Python dependencies
       run: pip install pytest-selenium
-    
-    - name: Allure Report action from marketplace
-      uses: simple-elf/allure-report-action@master
-      if: always()
-        #id: allure-report
+      working-directory: demo
+    - name: 📂 Step 3 - Create a temp artifact folder named `output`
+      run: |
+        mkdir output
+    - name: 🦊 Step 4 - Run Firefox tests and generate Allure folder inside `output` folder
+      run: |
+        pytest -vs test.py --browser firefox --alluredir=./
+        working-directory: {name of your project root here}
+    - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
+      run: |
+          allure generate output/
+    - name: 🎁 Step 6 - Publishing Allure artifact to GitHub Actions
+      uses: actions/upload-artifact@v2
       with:
-        allure_results: allure-results
-          #gh_pages: gh-pages
-          #allure_report: allure-report
-        allure_history: allure-history
-        keep_reports: 20
-    - name: Run Tests
-      run: pytest test.py --html=report.html
+        name: allure-report
+        path: allure-report
+
+
+    # - name: Run Tests
+    #   run: pytest test.py --html=report.html
     
   
