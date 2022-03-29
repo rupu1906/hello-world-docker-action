@@ -27,10 +27,10 @@ jobs:
     - name: Setup Pyhon
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.10'
         
     - name: Install Python dependencies
-      uses: py-actions/py-dependency-install@v2
+      uses: pip install pytest
       
     - name: Run Tests
-      run: python3 test.py --backend http://localhost:8080/ --frontend http://${{ steps.ip_addr.outputs.ip }}:4200 --selenium http://localhost:4444/wd/hub
+      run: python3 -m test.py --backend http://localhost:8080/ --frontend http://${{ steps.ip_addr.outputs.ip }}:4200 --selenium http://localhost:4444/wd/hub
