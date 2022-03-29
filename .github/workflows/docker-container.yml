@@ -51,9 +51,8 @@ jobs:
     steps:
       - name: Install docker
         run: |
-         docker --version
          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-         
+
          brew cask install docker
          docker --version
 
