@@ -42,7 +42,7 @@ jobs:
     - name: 🦊 Step 4 - Run Firefox tests and generate Allure folder inside `output` folder
       run: |
         pytest -vs test.py --alluredir=allure-report
-        working-directory: {name of your project root here}
+
     - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
       run: |
           allure generate output/
