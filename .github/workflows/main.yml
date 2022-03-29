@@ -33,4 +33,4 @@ jobs:
       run: pip install pytest
       
     - name: Run Tests
-      run: pytest test.py --backend http://localhost:8080/ --frontend http://${{ steps.ip_addr.outputs.ip }}:4200 --selenium http://localhost:4444/wd/hub
+      run: pytest test.py 
