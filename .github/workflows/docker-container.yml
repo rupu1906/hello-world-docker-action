@@ -61,7 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2 
       - name: docker compose
-        run: docker-compose up -d  --build
+        run: docker-compose up -d
       - name: Setup Pyhon
         uses: actions/setup-python@v2
         with:
