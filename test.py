@@ -11,13 +11,6 @@ class HackerNewsSearchTest(unittest.TestCase):
     def setUp(self):
         #self.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
         caps= {'browserName': os.getenv('BROWSER', 'chrome')}
-        # if caps.get("browserName")=="firefox":
-        
-        #     caps = webdriver.FirefoxOptions()
-
-        # else:
-        #     caps = webdriver.ChromeOptions()
-    
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444', 
             desired_capabilities=caps
