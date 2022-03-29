@@ -56,6 +56,7 @@ jobs:
          brew install docker
          brew install docker-compose
          brew services start docker-machine
+         sudo apt-get install virtualbox
          docker-machine create --driver virtualbox default
          eval "$(docker-machine env default)"
          docker ps
