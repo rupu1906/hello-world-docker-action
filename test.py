@@ -26,6 +26,7 @@ class HackerNewsSearchTest(unittest.TestCase):
     def test_hackernews_search_for_testdrivenio(self):
         browser = self.browser
         browser.get('https://news.ycombinator.com')
+        print(browser.title())
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('testdriven.io')
         search_box.send_keys(Keys.RETURN)
@@ -39,7 +40,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         search_box.send_keys('selenium')
         search_box.send_keys(Keys.RETURN)
         time.sleep(3)  # simulate long running test
-        self.assertIn('selenium', browser.page_source)
+        self.assertIn('selenium123', browser.page_source)
 
     def test_hackernews_search_for_testdriven(self):
         browser = self.browser
