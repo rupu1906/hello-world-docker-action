@@ -52,9 +52,13 @@ jobs:
       - name: Install docker
         run: |
          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
+         brew install docker-machine docker
          brew install docker
          brew install docker-compose
+         brew services start docker-machine
+         docker-machine create --driver virtualbox default
+         eval "$(docker-machine env default)"
+         docker ps
          docker --version
 
      
