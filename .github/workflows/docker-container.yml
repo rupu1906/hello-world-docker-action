@@ -44,7 +44,7 @@ jobs:
     #     mkdir output
     - name: 🦊 Step - Run Chrome tests 
       run: |
-        python -m pytest
+        python -m pytest tests
     # - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
     #   run: |
     #       allure generate output/
