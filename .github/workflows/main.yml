@@ -30,19 +30,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest pytest-cov
         pip install allure-pytest
+        npm install -g allure-commandline --save-dev
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Install Python dependencies
       run: pip install pytest-selenium
-
     - name: 📂 Step 3 - Create a temp artifact folder named `output`
       run: |
         mkdir output
     - name: 🦊 Step 4 - Run Firefox tests and generate Allure folder inside `output` folder
       run: |
-        pytest -vs test.py --alluredir=allure-report
-
+        pytest -vs test.py --alluredir=output
     - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
       run: |
           allure generate output/
