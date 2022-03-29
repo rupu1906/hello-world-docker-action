@@ -51,6 +51,8 @@ jobs:
     steps:
       - name: Install docker
         run: |
+         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+         brew install docker-machine docker
          brew install --cask docker
          brew install docker-compose
          brew services start docker-machine
