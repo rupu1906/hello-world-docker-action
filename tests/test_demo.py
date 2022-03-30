@@ -22,7 +22,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         else:
             caps = DesiredCapabilities.CHROME
         self.browser = webdriver.Remote(
-            command_executor="http://{url}:{port}/wd/hub", 
+            command_executor="http://"+url+":"+port, 
             desired_capabilities= caps
         )
 
