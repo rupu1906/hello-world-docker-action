@@ -36,7 +36,7 @@ jobs:
       id: upload-allure-results
       uses: ALJAZEERAPLUS/allure-report-upload-action@v1.0
       with:
-          allure-results-dir: tests/report
+          allure-results-dir: tests
           allure-project-id: ump-android
           allure-server-url: http://allure-server.aj-plus.net/allure-docker-service
           
