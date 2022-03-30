@@ -14,7 +14,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         load_dotenv()
         browser_name = os.environ.get("BROWSER")
         self.browser = webdriver.Remote(
-            command_executor='http://localhost:4444', 
+            command_executor='http://localhost:4444/wd/hub', 
             desired_capabilities=browser_name
         )
 
