@@ -50,11 +50,11 @@ jobs:
 
     steps:
       - name: Install docker
-        uses: docker-practice/actions-setup-docker@master
-      - name: check docker
         run: |
-          set -x
-          docker version
+          brew install --cask virtualbox
+          brew install --cask virtualbox-extension-pack
+          brew install docker
+          brew install docker-compose
 
       - name: Checkout
         uses: actions/checkout@v2 
