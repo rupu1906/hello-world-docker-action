@@ -14,13 +14,14 @@ class HackerNewsSearchTest(unittest.TestCase):
     def setUp(self):
         load_dotenv()
         browser_name = os.environ.get("BROWSER")
+        port = os.environ.get("PORT")
         
         if browser_name =="firfox":
             caps = DesiredCapabilities.FIREFOX
         else:
             caps = DesiredCapabilities.CHROME
         self.browser = webdriver.Remote(
-            command_executor=f"http://localhost:4444/wd/hub", 
+            command_executor=f"http://localhost:{port}/wd/hub", 
             desired_capabilities= caps
         )
 
