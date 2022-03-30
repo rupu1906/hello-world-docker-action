@@ -55,14 +55,11 @@ jobs:
           brew install --cask virtualbox-extension-pack
           brew install docker
           brew install docker-compose
-          brew install docker-machine docker
-        
+          brew install docker-machine
           launchctl load ~/Library/LaunchAgents/com.docker.registry.plist
-          sudo useradd docker
-          usermod aG docker mansop
-          sudo chown root:docker /var/run/docker.sock
-         
-  
+          docker-machine regenerate-certs default
+          docker-machine restart
+          
           
       - name: Checkout
         uses: actions/checkout@v2 
