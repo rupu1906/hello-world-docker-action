@@ -53,13 +53,9 @@ jobs:
       #   uses: docker-practice/actions-setup-docker@master
       - name: check docker
         run: |
-          brew install --cask virtualbox
-          brew install --cask virtualbox-extension-pack
-          brew install docker
-          brew install docker-compose
-          brew install docker-machine
-          launchctl load ~/Library/LaunchAgents/com.docker.registry.plist
-          docker-machine create --driver virtualbox "docker-machine"
+         brew install --cask docker 
+         brew install docker-compose
+         open /Applications/Docker.app
           
           
       - name: Checkout
