@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 #from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from selenium.webdriver import DesiredCapabilities
 import os
 
 class HackerNewsSearchTest(unittest.TestCase):
@@ -13,9 +14,13 @@ class HackerNewsSearchTest(unittest.TestCase):
     def setUp(self):
         load_dotenv()
         browser_name = os.environ.get("BROWSER")
+        if browser_name =="firfox":
+            caps = DesiredCapabilities.FIREFOX
+        else:
+            caps = DesiredCapabilities.CHROME
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444', 
-            desired_capabilities=browser_name
+            desired_capabilities= caps
         )
 
     def test_hackernews_search_for_testdrivenio(self):
