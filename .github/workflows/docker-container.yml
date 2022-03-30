@@ -26,10 +26,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
   
     - name: 🦊 Step - Run Chrome tests 
-      env: 
-        BROWSER: ${{secrets.BROWSER}}
       run: |
         python -m pytest tests --html=report.html
+      env: 
+        BROWSER: ${{secrets.BROWSER}}
     - name: Upload the file
       uses: actions/upload-artifact@v2
       with:
