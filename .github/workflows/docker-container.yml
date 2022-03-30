@@ -54,8 +54,12 @@ jobs:
       - name: check docker
         run: |
          brew install --cask docker 
+         brew install docker-machine 
          brew install docker-compose
          open /Applications/Docker.app
+         sudo groupadd docker
+         sudo usermod -aG docker $rupu1906
+        
           
           
       - name: Checkout
