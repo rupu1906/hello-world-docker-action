@@ -49,21 +49,18 @@ jobs:
     runs-on: 'macos-latest'
 
     steps:
-      - name: Install docker
-        uses: docker-practice/actions-setup-docker@master
-      - name: check docker
-        run: |
-          set -x
-          docker version
-
       # - name: Install docker
       #   uses: docker-practice/actions-setup-docker@master
-      # - name: check docker
-      #   run: |
-      #     brew install docker-machine docker docker-compose
-      #     docker-machine create --virtualbox-cpu-count "3" --virtualbox-memory "8192" --virtualbox-disk-size "40000" default
-      #     docker-machine env
-      #     eval $(docker-machine env)
+      - name: check docker
+        run: |
+          brew install hyperkit
+          brew install docker-machine docker docker-compose
+          brew install docker-machine-driver-hyperkit
+          docker-machine create --driver hyperkit default
+          docker-machine restart
+
+          # docker-machine env
+          # eval $(docker-machine env)
         #  brew install --cask docker 
         #  brew install docker-machine 
         #  brew install docker-compose
