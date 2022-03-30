@@ -49,14 +49,21 @@ jobs:
     runs-on: 'macos-latest'
 
     steps:
-      # - name: Install docker
-      #   uses: docker-practice/actions-setup-docker@master
+      - name: Install docker
+        uses: docker-practice/actions-setup-docker@master
       - name: check docker
         run: |
-          brew install docker-machine docker docker-compose
-          docker-machine create --virtualbox-cpu-count "3" --virtualbox-memory "8192" --virtualbox-disk-size "40000" default
-          docker-machine env
-          eval $(docker-machine env)
+          set -x
+          docker version
+
+      # - name: Install docker
+      #   uses: docker-practice/actions-setup-docker@master
+      # - name: check docker
+      #   run: |
+      #     brew install docker-machine docker docker-compose
+      #     docker-machine create --virtualbox-cpu-count "3" --virtualbox-memory "8192" --virtualbox-disk-size "40000" default
+      #     docker-machine env
+      #     eval $(docker-machine env)
         #  brew install --cask docker 
         #  brew install docker-machine 
         #  brew install docker-compose
