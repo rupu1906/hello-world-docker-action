@@ -51,13 +51,10 @@ jobs:
     steps:
       - name: Install docker
         run: |
-          brew install hyperkit
-          brew install minikube
+          brew install --cask virtualbox
+          brew install --cask virtualbox-extension-pack
           brew install docker
           brew install docker-compose
-          minikube start
-          echo "'minikube ip' docker.local" | sudo tee -a /etc/hosts > /dev/null
-        
 
           
       - name: Checkout
