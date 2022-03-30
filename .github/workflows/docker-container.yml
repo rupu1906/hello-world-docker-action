@@ -49,8 +49,9 @@ jobs:
     runs-on: 'macos-latest'
 
     steps:
-  
-      - uses: docker-practice/actions-setup-docker@master
+      - name: Install docker
+        uses: docker-practice/actions-setup-docker@master
+      - name: check docker
         run: |
           set -x
           docker version
