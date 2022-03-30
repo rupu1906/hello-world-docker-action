@@ -29,7 +29,7 @@ jobs:
       env: 
         BROWSER: ${{secrets.BROWSER}}
         URL: ${{secrets.URL}}
-        PORT: ${{secrets.PORT}}
+  
       run: |
         python -m pytest tests --html=report.html
       

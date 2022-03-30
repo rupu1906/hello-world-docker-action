@@ -14,21 +14,20 @@ class HackerNewsSearchTest(unittest.TestCase):
     def setUp(self):
         load_dotenv()
         browser_name = os.environ.get("BROWSER")
-        url =os.environ.get("URL")
-        port = os.environ.get("PORT")
-
+        
         if browser_name =="firfox":
             caps = DesiredCapabilities.FIREFOX
         else:
             caps = DesiredCapabilities.CHROME
         self.browser = webdriver.Remote(
-            command_executor="http://"+url+":"+port, 
+            command_executor=f"http://localhost:4444/wd/hub", 
             desired_capabilities= caps
         )
 
     def test_hackernews_search_for_testdrivenio(self):
         browser = self.browser
-        browser.get('https://news.ycombinator.com')
+        url = os.environ.get("URL")
+        browser.get(url)
         print(browser.title)
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('testdriven.io')
@@ -38,7 +37,8 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def test_hackernews_search_for_selenium(self):
         browser = self.browser
-        browser.get('https://news.ycombinator.com')
+        url = os.environ.get("URL")
+        browser.get(url)
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('selenium')
         search_box.send_keys(Keys.RETURN)
@@ -47,7 +47,8 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def test_hackernews_search_for_testdriven(self):
         browser = self.browser
-        browser.get('https://news.ycombinator.com')
+        url = os.environ.get("URL")
+        browser.get(url)
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('testdriven')
         search_box.send_keys(Keys.RETURN)
@@ -56,7 +57,8 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def test_hackernews_search_with_no_results(self):
         browser = self.browser
-        browser.get('https://news.ycombinator.com')
+        url = os.environ.get("URL")
+        browser.get(url)
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('?*^^%')
         search_box.send_keys(Keys.RETURN)
