@@ -49,12 +49,17 @@ jobs:
     runs-on: 'macos-latest'
 
     steps:
-      - name: Install docker
-        uses: docker-practice/actions-setup-docker@master
+      # - name: Install docker
+      #   uses: docker-practice/actions-setup-docker@master
       - name: check docker
         run: |
-          set -x
-          docker version
+          brew install --cask virtualbox
+          brew install --cask virtualbox-extension-pack
+          brew install docker
+          brew install docker-compose
+          brew install docker-machine
+          launchctl load ~/Library/LaunchAgents/com.docker.registry.plist
+          docker-machine create --driver virtualbox "docker-machine"
           
           
       - name: Checkout
