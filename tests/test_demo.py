@@ -1,5 +1,7 @@
 import time
 import unittest
+import os
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 #from webdriver_manager.chrome import ChromeDriverManager
@@ -9,8 +11,11 @@ import os
 class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
+        load_dotenv()
+        browser = os.environ.get("BROWSER")
+        print( browser)
         #self.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-        caps= {'browserName': os.getenv('BROWSER', 'chrome')}
+        caps= browser
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444', 
             desired_capabilities=caps
