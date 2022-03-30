@@ -55,7 +55,7 @@ jobs:
           brew install --cask virtualbox-extension-pack
           brew install docker
           brew install docker-compose
-
+          docker ps -a
           
       - name: Checkout
         uses: actions/checkout@v2 
