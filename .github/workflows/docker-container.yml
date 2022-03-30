@@ -50,8 +50,16 @@ jobs:
 
     steps:
       - name: Install docker
-        uses: docker-practice/actions-setup-docker@master
-
+        run: |
+          brew install --cask virtualbox
+          brew install --cask virtualbox-extension-pack
+          brew install --cask docker
+          brew install docker-compose
+          brew install docker-machine docker
+          docker-machine create --driver virtualbox default
+          eval "$(docker-machine env default)"
+  
+          
       - name: Checkout
         uses: actions/checkout@v2 
       - name: docker compose
