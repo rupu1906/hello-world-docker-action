@@ -26,6 +26,7 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def test_hackernews_search_for_testdrivenio(self):
         browser = self.browser
+        load_dotenv()
         url = os.environ.get("URL")
         browser.get(url)
         print(browser.title)
@@ -36,6 +37,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('testdriven.io', browser.page_source)
 
     def test_hackernews_search_for_selenium(self):
+        load_dotenv()
         browser = self.browser
         url = os.environ.get("URL")
         browser.get(url)
@@ -46,6 +48,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('selenium', browser.page_source)
 
     def test_hackernews_search_for_testdriven(self):
+        load_dotenv()
         browser = self.browser
         url = os.environ.get("URL")
         browser.get(url)
@@ -56,6 +59,7 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('testdriven', browser.page_source)
 
     def test_hackernews_search_with_no_results(self):
+        load_dotenv()
         browser = self.browser
         url = os.environ.get("URL")
         browser.get(url)
