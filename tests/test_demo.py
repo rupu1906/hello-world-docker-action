@@ -12,13 +12,10 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
         load_dotenv()
-        browser = os.environ.get("BROWSER")
-        print( browser)
-        #self.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-        caps= browser
+        browser_name = os.environ.get("BROWSER")
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444', 
-            desired_capabilities=caps
+            desired_capabilities=browser_name
         )
 
     def test_hackernews_search_for_testdrivenio(self):
