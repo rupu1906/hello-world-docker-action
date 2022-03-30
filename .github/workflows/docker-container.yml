@@ -58,6 +58,7 @@ jobs:
           brew install docker-machine
           launchctl load ~/Library/LaunchAgents/com.docker.registry.plist
           docker-machine regenerate-certs default
+          docker-machine env default
           docker-machine restart
           
           
