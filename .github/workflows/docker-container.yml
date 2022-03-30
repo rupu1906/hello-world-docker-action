@@ -33,8 +33,9 @@ jobs:
       run: |
         python -m pytest tests
 
-    - name: Allure report
-      uses: afiore/action-allure-report@v0.1.0
+    - name: Allure report simple
+      uses: esemi/action-allure-report@v0.2.0
+
 
 
     # - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
