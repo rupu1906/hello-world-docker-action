@@ -55,12 +55,12 @@ jobs:
           brew install --cask virtualbox-extension-pack
           brew install docker
           brew install docker-compose
-          docker ps -a
+  
           
       - name: Checkout
         uses: actions/checkout@v2 
       - name: docker compose
-        run: docker-compose up -d
+        run: sudo docker-compose up -d
       - name: Setup Pyhon
         uses: actions/setup-python@v2
         with:
