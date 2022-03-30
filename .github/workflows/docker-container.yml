@@ -10,6 +10,9 @@ on:
 jobs:
   Ubuntu-OS:
     runs-on: ubuntu-latest
+    environment:
+      name: allure
+      url: ${{ steps.get_job_url.outputs.url_output }}
 
     steps:
     - name: Checkout
@@ -24,19 +27,30 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    # - name: Install Python dependencies
-    #   run: pip install pytest-selenium
-    # - name: 📂 Step 3 - Create a temp artifact folder named `output`
-    #   run: |
-    #     mkdir output
+  
     - name: 🦊 Step - Run Chrome tests 
       run: |
         python -m pytest tests
 
-    - name: Allure report simple
-      uses: esemi/action-allure-report@v0.2.0
+    - name: Upload Allure Results
+      id: upload-allure-results
+      uses: ALJAZEERAPLUS/allure-report-upload-action@v1.0
+      with:
+          allure-results-dir: tests/report
+          allure-project-id: ump-android
+          allure-server-url: http://allure-server.aj-plus.net/allure-docker-service
+          
+    - run: echo ::set-output name=url_output::${{ steps.upload-allure-results.outputs.allure-report-url }}
+      id: get_job_url
 
 
+
+
+  # - name: Install Python dependencies
+    #   run: pip install pytest-selenium
+    # - name: 📂 Step 3 - Create a temp artifact folder named `output`
+    #   run: |
+    #     mkdir output
 
     # - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
     #   run: |
