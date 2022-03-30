@@ -51,8 +51,7 @@ jobs:
     steps:
       - name: Install docker
       - uses: docker-practice/actions-setup-docker@master
-      - run: |
-          set -x
+      - run: set -x
       - name: Checkout
         uses: actions/checkout@v2 
       - name: docker compose
