@@ -27,12 +27,19 @@ jobs:
   
     - name: 🦊 Step - Run Chrome tests 
       run: |
-        python -m pytest tests --html=report.html
+        python -m pytest tests --html=report.html alluredir=allure-tests
     - name: Upload the file
       uses: actions/upload-artifact@v2
       with:
           name: benchmark_results
           path: report.html
+    - name: Upload the file
+      uses: actions/upload-artifact@v2
+      with:
+          name: benchmark_results
+          path: allure-tests
+
+    
 
 
 
