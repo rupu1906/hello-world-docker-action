@@ -10,6 +10,11 @@ on:
 jobs:
   Ubuntu-OS:
     runs-on: ubuntu-latest
+    env: 
+      BROWSER: ${{secrets.BROWSER}}
+      URL: ${{secrets.URL}}
+      PORT: ${{secrets.PORT}}
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2 
@@ -26,10 +31,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
   
     - name: 🦊 Step - Run Chrome tests 
-      env: 
-        BROWSER: ${{secrets.BROWSER}}
-        URL: ${{secrets.URL}}
-  
       run: |
         python -m pytest tests --html=report.html
       
