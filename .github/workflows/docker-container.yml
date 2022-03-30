@@ -58,6 +58,9 @@ jobs:
           brew install docker-machine docker
         
           launchctl load ~/Library/LaunchAgents/com.docker.registry.plist
+          sudo useradd docker
+          usermod aG docker mansop
+          sudo chown root:docker /var/run/docker.sock
          
   
           
