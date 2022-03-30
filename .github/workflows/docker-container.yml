@@ -55,6 +55,7 @@ jobs:
           brew install --cask virtualbox-extension-pack
           brew install docker
           brew install docker-compose
+          sudo chmod o=rwx /var/run/docker.sock
   
           
       - name: Checkout
