@@ -1,0 +1,65 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:None/wd/hub/session",
+      "children" : [ {
+        "name" : "test_hackernews_search_for_selenium",
+        "uid" : "11330473ee5a3991",
+        "parentUid" : "54f924d8d6998faefe25a8e67a0d8886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1648762622286,
+          "stop" : 1648762622287,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_hackernews_search_for_testdriven",
+        "uid" : "ca8350b3d75f3337",
+        "parentUid" : "54f924d8d6998faefe25a8e67a0d8886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1648762622391,
+          "stop" : 1648762622391,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_hackernews_search_for_testdrivenio",
+        "uid" : "4ba3ed5aebf3e28",
+        "parentUid" : "54f924d8d6998faefe25a8e67a0d8886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1648762622470,
+          "stop" : 1648762622471,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_hackernews_search_with_no_results",
+        "uid" : "61599dddc7f78550",
+        "parentUid" : "54f924d8d6998faefe25a8e67a0d8886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1648762622531,
+          "stop" : 1648762622531,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "54f924d8d6998faefe25a8e67a0d8886"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
