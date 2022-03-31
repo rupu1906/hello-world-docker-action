@@ -1,35 +1,23 @@
 import time
 import unittest
-import os
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver import DesiredCapabilities
-import os
+
+from selenium.webdriver import DesiredCapabilities
 
 class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
-        load_dotenv()
-        browser_name = os.environ.get("BROWSER")
-        port = os.environ.get("PORT")
-        
-        if browser_name =="firfox":
-            caps = DesiredCapabilities.FIREFOX
-        else:
-            caps = DesiredCapabilities.CHROME
         self.browser = webdriver.Remote(
-            command_executor=f"http://localhost:{port}/wd/hub", 
-            desired_capabilities= caps
+            command_executor="http://localhost:4444/wd/hub", 
+            desired_capabilities=DesiredCapabilities.CHROME
         )
 
     def test_hackernews_search_for_testdrivenio(self):
         browser = self.browser
-        load_dotenv()
-        url = os.environ.get("URL")
-        browser.get(url)
+        browser.get('https://news.ycombinator.com')
         print(browser.title)
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('testdriven.io')
@@ -38,10 +26,8 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('testdriven.io', browser.page_source)
 
     def test_hackernews_search_for_selenium(self):
-        load_dotenv()
         browser = self.browser
-        url = os.environ.get("URL")
-        browser.get(url)
+        browser.get('https://news.ycombinator.com')
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('selenium')
         search_box.send_keys(Keys.RETURN)
@@ -49,10 +35,8 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('selenium', browser.page_source)
 
     def test_hackernews_search_for_testdriven(self):
-        load_dotenv()
         browser = self.browser
-        url = os.environ.get("URL")
-        browser.get(url)
+        browser.get('https://news.ycombinator.com')
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('testdriven')
         search_box.send_keys(Keys.RETURN)
@@ -60,10 +44,8 @@ class HackerNewsSearchTest(unittest.TestCase):
         self.assertIn('testdriven', browser.page_source)
 
     def test_hackernews_search_with_no_results(self):
-        load_dotenv()
         browser = self.browser
-        url = os.environ.get("URL")
-        browser.get(url)
+        browser.get('https://news.ycombinator.com')
         search_box = browser.find_element(By.NAME, 'q')
         search_box.send_keys('?*^^%')
         search_box.send_keys(Keys.RETURN)
