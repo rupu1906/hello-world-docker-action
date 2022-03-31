@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Mar 31 21:53:16 GMT 2022","Thu Mar 31 21:53:21 GMT 2022","4765","tests","test_demo","HackerNewsSearchTest","","","test_hackernews_search_for_testdrivenio",""
+"passed","Thu Mar 31 21:53:12 GMT 2022","Thu Mar 31 21:53:16 GMT 2022","4710","tests","test_demo","HackerNewsSearchTest","","","test_hackernews_search_for_testdriven",""
+"passed","Thu Mar 31 21:53:21 GMT 2022","Thu Mar 31 21:53:26 GMT 2022","4781","tests","test_demo","HackerNewsSearchTest","","","test_hackernews_search_with_no_results",""
+"passed","Thu Mar 31 21:53:06 GMT 2022","Thu Mar 31 21:53:12 GMT 2022","5632","tests","test_demo","HackerNewsSearchTest","","","test_hackernews_search_for_selenium",""

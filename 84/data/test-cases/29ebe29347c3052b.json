@@ -1,0 +1,168 @@
+{
+  "uid" : "29ebe29347c3052b",
+  "name" : "test_hackernews_search_for_testdrivenio",
+  "fullName" : "tests.test_demo.HackerNewsSearchTest#test_hackernews_search_for_testdrivenio",
+  "historyId" : "82e5ddd80507395aa7c296e2c4c72ee5",
+  "time" : {
+    "start" : 1648763596749,
+    "stop" : 1648763601514,
+    "duration" : 4765
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586321,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586388,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest",
+    "time" : {
+      "start" : 1648763586388,
+      "stop" : 1648763586388,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586321,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f76cea5166d4b7d7",
+      "name" : "stdout",
+      "source" : "f76cea5166d4b7d7.txt",
+      "type" : "text/plain",
+      "size" : 12
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest::0",
+    "time" : {
+      "start" : 1648763606297,
+      "stop" : 1648763606298,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "HackerNewsSearchTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az201-481"
+  }, {
+    "name" : "thread",
+    "value" : "3409-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4ba3ed5aebf3e28",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/83//#testresult/4ba3ed5aebf3e28",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:None/wd/hub/session",
+        "time" : {
+          "start" : 1648762622470,
+          "stop" : 1648762622471,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "29ebe29347c3052b.json",
+  "parameterValues" : [ ]
+}

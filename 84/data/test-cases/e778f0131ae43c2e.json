@@ -1,0 +1,152 @@
+{
+  "uid" : "e778f0131ae43c2e",
+  "name" : "test_hackernews_search_with_no_results",
+  "fullName" : "tests.test_demo.HackerNewsSearchTest#test_hackernews_search_with_no_results",
+  "historyId" : "f62105d4f8159725412b6e8ba3c7cd4f",
+  "time" : {
+    "start" : 1648763601516,
+    "stop" : 1648763606297,
+    "duration" : 4781
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586321,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586388,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest",
+    "time" : {
+      "start" : 1648763586388,
+      "stop" : 1648763586388,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1648763586321,
+      "stop" : 1648763586321,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest::0",
+    "time" : {
+      "start" : 1648763606297,
+      "stop" : 1648763606298,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "HackerNewsSearchTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az201-481"
+  }, {
+    "name" : "thread",
+    "value" : "3409-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "61599dddc7f78550",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/83//#testresult/61599dddc7f78550",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:None/wd/hub/session",
+        "time" : {
+          "start" : 1648762622531,
+          "stop" : 1648762622531,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e778f0131ae43c2e.json",
+  "parameterValues" : [ ]
+}
