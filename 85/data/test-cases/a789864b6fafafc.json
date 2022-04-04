@@ -1,0 +1,161 @@
+{
+  "uid" : "a789864b6fafafc",
+  "name" : "test_hackernews_search_for_testdriven",
+  "fullName" : "tests.test_demo.HackerNewsSearchTest#test_hackernews_search_for_testdriven",
+  "historyId" : "080a79c9368300eae8aa9f660a6f61cf",
+  "time" : {
+    "start" : 1649106978149,
+    "stop" : 1649106983123,
+    "duration" : 4974
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972425,
+      "duration" : 70
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest",
+    "time" : {
+      "start" : 1649106972425,
+      "stop" : 1649106972425,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972355,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972355,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest::0",
+    "time" : {
+      "start" : 1649106992821,
+      "stop" : 1649106992821,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "HackerNewsSearchTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az212-17"
+  }, {
+    "name" : "thread",
+    "value" : "3492-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3b040bc9ed416a4f",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/84//#testresult/3b040bc9ed416a4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648763592037,
+          "stop" : 1648763596747,
+          "duration" : 4710
+        }
+      }, {
+        "uid" : "ca8350b3d75f3337",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/83//#testresult/ca8350b3d75f3337",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:None/wd/hub/session",
+        "time" : {
+          "start" : 1648762622391,
+          "stop" : 1648762622391,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a789864b6fafafc.json",
+  "parameterValues" : [ ]
+}

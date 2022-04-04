@@ -1,0 +1,161 @@
+{
+  "uid" : "553dfacbdd63d7e7",
+  "name" : "test_hackernews_search_for_selenium",
+  "fullName" : "tests.test_demo.HackerNewsSearchTest#test_hackernews_search_for_selenium",
+  "historyId" : "4472c73dc7593c2bd351f5cb9b3d57f0",
+  "time" : {
+    "start" : 1649106972429,
+    "stop" : 1649106978147,
+    "duration" : 5718
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972425,
+      "duration" : 70
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest",
+    "time" : {
+      "start" : 1649106972425,
+      "stop" : 1649106972425,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972355,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1649106972355,
+      "stop" : 1649106972355,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "unittest_setUpClass_fixture_HackerNewsSearchTest::0",
+    "time" : {
+      "start" : 1649106992821,
+      "stop" : 1649106992821,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "HackerNewsSearchTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az212-17"
+  }, {
+    "name" : "thread",
+    "value" : "3492-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "b625ebb1835d4014",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/84//#testresult/b625ebb1835d4014",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648763586403,
+          "stop" : 1648763592035,
+          "duration" : 5632
+        }
+      }, {
+        "uid" : "11330473ee5a3991",
+        "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/83//#testresult/11330473ee5a3991",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:None/wd/hub/session",
+        "time" : {
+          "start" : 1648762622286,
+          "stop" : 1648762622287,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "553dfacbdd63d7e7.json",
+  "parameterValues" : [ ]
+}

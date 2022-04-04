@@ -1,0 +1,57 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "test_hackernews_search_for_selenium",
+    "uid" : "553dfacbdd63d7e7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649106972429,
+      "stop" : 1649106978147,
+      "duration" : 5718
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_hackernews_search_for_testdriven",
+    "uid" : "a789864b6fafafc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649106978149,
+      "stop" : 1649106983123,
+      "duration" : 4974
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_hackernews_search_for_testdrivenio",
+    "uid" : "1286296ee03fd4ba",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649106983125,
+      "stop" : 1649106987993,
+      "duration" : 4868
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_hackernews_search_with_no_results",
+    "uid" : "83e80830d7641715",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649106987996,
+      "stop" : 1649106992820,
+      "duration" : 4824
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}

@@ -1,0 +1,41 @@
+[ {
+  "uid" : "a789864b6fafafc",
+  "name" : "test_hackernews_search_for_testdriven",
+  "time" : {
+    "start" : 1649106978149,
+    "stop" : 1649106983123,
+    "duration" : 4974
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "553dfacbdd63d7e7",
+  "name" : "test_hackernews_search_for_selenium",
+  "time" : {
+    "start" : 1649106972429,
+    "stop" : 1649106978147,
+    "duration" : 5718
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "83e80830d7641715",
+  "name" : "test_hackernews_search_with_no_results",
+  "time" : {
+    "start" : 1649106987996,
+    "stop" : 1649106992820,
+    "duration" : 4824
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1286296ee03fd4ba",
+  "name" : "test_hackernews_search_for_testdrivenio",
+  "time" : {
+    "start" : 1649106983125,
+    "stop" : 1649106987993,
+    "duration" : 4868
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
