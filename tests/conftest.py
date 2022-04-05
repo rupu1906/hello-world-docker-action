@@ -1,6 +1,6 @@
 import pytest
-from src.PracticeTests.config.configuration_reader import ConfigurationReader
-from src.PracticeTests.helpers.driver import DriverExtensions
+from configuration_reader import ConfigurationReader
+from driver import DriverExtensions
 from selenium import webdriver
 
 
