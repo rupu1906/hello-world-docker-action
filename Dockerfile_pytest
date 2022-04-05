@@ -11,4 +11,4 @@ COPY requirements.txt requirements.txt
 COPY . .
 RUN pip install -r requirements.txt
 
-CMD ["python","-m","pytest","tests/","--alluredir=reports","--host","chrome","--remote"]
+CMD ["python","-m","pytest","tests/","--alluredir=reports","--host","chrome"]
