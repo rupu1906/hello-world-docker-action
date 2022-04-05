@@ -3,7 +3,7 @@ name: Integration Tests
 on:
   push:
     branches: 
-      - master
+      - main
 
 jobs:
   Integration-tests:
@@ -38,3 +38,6 @@ jobs:
         with:
           branch: gh-pages
           folder: allure-history
+      
+      - name: Deploy to GitHub Pages
+        run: docker system prune -f
