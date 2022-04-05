@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://rupu1906.github.io/hello-world-docker-action",
+  "buildOrder" : 1,
+  "buildName" : "GitHub Actions Run #2098233590",
+  "buildUrl" : "https://github.com/rupu1906/hello-world-docker-action/actions/runs/2098233590",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://rupu1906.github.io/hello-world-docker-action/1/"
+} ]
