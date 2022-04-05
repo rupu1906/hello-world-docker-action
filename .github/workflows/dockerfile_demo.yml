@@ -1,0 +1,40 @@
+name: Integration Tests
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  Integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.x
+
+      - name: Create docker container
+        run: docker compose -f "docker-compose-v2.yml" up -d
+     
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: reports
+          allure_history: allure-history
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: allure-history
